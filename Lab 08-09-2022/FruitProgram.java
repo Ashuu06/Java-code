@@ -6,7 +6,7 @@ class FruitProgram {
 		int sold_apples = 40; // Total sold apples in percentage
 		int apples = 420; // Number of remaining apples
 		
-		// Calculation for finding total apples beforing selling
+		// Calculation for finding total apples before selling
 		double total_apples = (apples * 100) / remaining_apples;
 		System.out.print("Originally Seller had " + total_apples + " apples");
 	}
