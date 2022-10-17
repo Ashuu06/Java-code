@@ -1,0 +1,98 @@
+Setting up the Game
+1. File-> New Project (Set the destination wherever you want, I recommend creating a folder 
+called lab1)
+2. Unity 3D will setup the following folders for you in your project.
+3. Next do a File->Save Scene, and create a new folder in the Assets called “Scenes”, and save 
+the file as “scene1”
+4. Now lets create a plane, as our surface to work on. We can either use a terrain, or a plane. I 
+am going to choose to do a terrain.
+a. We then will want to rename the terrain. We can double click the object, and then 
+in the hierarchy anel on the left, rename the object from ‘terrain’ t ‘GameTerrain’
+b. You will also notice, there are handles on the terrain. We can move it around, and 
+transform I I t his way, or otherwise use the inspector panel, by changing the
+scale.
+5. Now lets create our game object, which will be a ‘sphere’. Once again, do GameObject->Sphere
+a. Rename the object ‘Player’
+b. If you cannot find your object, highlight it in the hierarchy and press ‘f’ to focus on 
+that object.
+c. Set the objects position to 0,1,0
+6. Add a directional light now, so our scene can have some light. GameObject->Light-
+>Directional light.
+a. Set the intensity to 0.1.
+b. Set the position to 0,5,0
+c. Set angle to 30,60,0
+d. Shadow Type -> Soft Shadows
+e. Resolution -> Very High Resolution
+7. Add one more light by duplicating(Ctrl+D) our current Directional Light
+a. Rename it to fill light
+b. Shadowtype-> No Shadows
+c. Adjust the color to a blue-ish tint.
+d. Reverse the angles, so it should be -30,-60,0, so that the light shines up.
+Save your scene.
+Move the player
+1. Select the Player. You will see in the inspector a way to “Add Component” Select Physics-
+>Rigid Body
+2. Now we are going to move the player by manipulating the physics forces. We will write a script 
+to do this. Lets get organized though, and create a scripts folder. Go down to the Project Panel, 
+and then right-click create new folder. Name it ‘scripts’.
+3. We then will ‘add component’ on our object again, which will be a C# Script. This will attach it
+to the object.
+4. Double-click on the script, and then MonoDevelop will be loaded. MonoDevelop is 
+Unity’s primary scripting engine.
+a. You will notice in your script 2 methods.
+i. Start() – Which is what happens during initialization (like a constructor)
+ii. Update() – What happens every frame of the game on this object.
+b. If we want we can delete Start, as we will not need it, or otherwise just leave it for later.
+5. Start by typing the word ‘input’ in the ‘Update()’ method.
+a. If you then hold “Ctrl” and press the single quote key ‘, then help will be brought up for 
+you. (Note if you are on Mac, Ctrl is replaced with Cmd)
+b. Here is the final script
+c. Save your script in MonoDevelop. Unity is constantly compiling, so it will be ready to go.
+d. Return t Unity3D. Now is a good time to save your Unity Scene. (In fact, you 
+should constantly be saving!)
+e. Notice if we select our ‘Player’ game object, it will have a property for speed. Lets set it 
+to 500.
+f. Test your game out by pressing the play button.
+The Camera
+Let us create a new camera, so that it is tied to the player.
+1. Game Object -> Camera (You can replicate my settings roughly by dragging around the camera, 
+or typing them in here)
+2. We wil then write a script (Add Component->Script->CSharp, and be sure to move the script into 
+the Scripts folder)
+Create the Level
+1. Create a new GameObject called Walls in our hierarchy. We will then create four cubes 
+underneath it, and scale them to build walls.
+2. The scale of the West Wall for example is this:
+3. Your scene should roughly look like this
+Create Items
+1. Create a new GameObject that is a cube called ‘pickup’
+2. Scale it appropriately
+3. Lets now create a script called ‘RotatingCube’ for the pickup object to make it spin. Lets now 
+open it up in MonoDevelop
+4. Here is the final script.
+5. Now that we have created an object, lets create some more of them. We are going to make
+these into ‘prefabs’. A ‘prefab’ is a reusable asset that acts as a blueprint for an object. We can 
+use it in any scene in our project once it is created!
+7. Lets create a new folder in our hierarchy called ‘prefabs’ to do this.
+Then drag our object into the folder from our object hierarchy. And that’ it! You will notice our 
+object is now highlighted in ‘blue’ in the hierarchy to indicate that it is a prefab.
+8. Now that it is a prefab, lets create an empty GameObject called ‘pickups’. Position this game
+object to the origin. Now move our pickup into the object, so that it is a child.
+Now we want to duplicate this object, and move it around. To move it around in a global 
+coordinate space, toggle the coordinate space to global.
+9. Now we manipulate the object, in regards to the world, instead of its own rotation, scale, and 
+position.
+10. Create several of them by duplicating them (note, since they are prefabs, they will already have 
+scripts attached to them and be ready to go!)
+11. You scene should look something like this:
+Collecting Objects
+In order to win the game, the player will collide with the objects and pick them up. When they have 
+picked up all the objects, the game is over. In order to do this, we will learn about colliding with the 
+correct object, and picking it up.
+1. Open up our original player script that we wrote.
+2. (Stepping back, this is how to learn about what methods are available)
+3. In our script, add the following method.
+Winning the Game
+1. When we have picked up all of the objects, we will have won the game. Lets make a private 
+variable in our player script that gets updated every time we collide with an object
+

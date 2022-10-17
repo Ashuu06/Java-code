@@ -1,0 +1,40 @@
+AR Last try
+New project-3D
+Create-Vuforia-AR Camera
+Needs some import- click on Yes
+Delete the Main Camera
+Now we create image
+We will add our own target
+Click on Add Target
+Create develop liscen in Vuforia
+Copy and paste the key from here to Vuforia configuration
+Now go back to Vuforia site
+Click on target
+Create
+Click on arlast db- add target
+Width set to 10
+Click on add
+Check rating.
+Click on Downloads all
+Open
+Import
+Onclick to choclates we want to play a video
+Simply drag and drop images and video in resource folder
+If u click on video and play
+The video will run
+Click on Quad
+Add component-video-video player
+Drag and drop the video to video clip
+Click AR Camera -open Vuforia Configuration
+Load and activate arlast db
+Done 
+Play
+Video of output stored at C:\aarti\CKT\2018-19\ty\game programming\practicals\Final Practical 
+Print\AR VR practical\AR Demo.mp4
+We will add one more quad
+We will add texture to img itself
+Name new material as “Angad1”
+Now drag the angad image to albedio of that material
+Now change value 2 and 2 of max simultaneous tracked images and objects respectively.
+Select the second quad and drag and drop Angad1 material on to element 0 inside material
+

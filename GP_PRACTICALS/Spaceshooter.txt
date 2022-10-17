@@ -1,0 +1,89 @@
+ Open unity software and create a new project.
+ Go to file-> New Project->Click on create new project ->set the location (By clicking on Set Button
+)-> Give the name to your project As Space Shooter->Click on save Button->Click on Create 
+Button.
+Go to window button and open asset store
+Click on Unity essential, then go to sample projects
+Import the package in software
+The Scene will look like after Importing the Asset -> Select All 
+Package->Click on Import.
+The Asset is created.
+Save your scene. (Crtl+s)
+Save the scene inside the Asset directory make new folder as _Scene. 
+Give the name to your scene as main the save it.
+Now we will set the build target to our scene
+Go to file->Build Setting->Select Web Player->Click on switch 
+platform
+Now we need to fill the Build Detail. 
+Go To File-> Project Setting->Player->
+Set the resolution:
+Go to Inspector window(Right Middle 
+Corner Of the scene)->Resolution-
+>Change the resolution width as 600 
+AND height as 900.
+Drag the game view to the top .
+Now save the layout: choose layout->click on save layout->Give the name as Space Shooter->click on 
+save button.
+Step 2: Setting Up the player Game Object
+Go to scene view->Add the player Ship Model from Mode Directory->Drag the vehicle 
+player Ship from model directory to hierarchy
+Go to edit->from selected
+Now Ho To Hierarchy->double click on Vehicle ship->Rename it as Player->press Enter Key
+Add New Component into the Inspector Window
+Click on Add Component Tab->Select Physics->Rigid Body
+GotoRigit Body Component -
+>Deselect Use Gravity ->
+Add New Component into the Inspector Window
+Click on Add Component Tab->Select Physics->Select Capsule Collider
+Now Change the Capsule Collider Direction to Z-axis->change the radius and Height also ->
+Go to Add Component button again->Physics->Mesh
+Collider->Replace
+Go to mesh collider 
+Component inside the 
+Inspector window->turn 
+off the Mesh renderer tab
+Open the Model-> Select the Mesh Asset->Drag it 
+in to the Mesh Slot on the Mesh Collider->Turn 
+On the Mesh Renderer tab-> Select Is Trigger tab
+>Asset->Prefab->VFX->Engines->Drag it 
+into the Player Hierarchy
+You Can Change the Position of
+Ship By Changing the Tap View
+Step 3 : 
+Setting up
+the main
+camera and
+lighting for
+Click on the main camera from hierarchy->Go To Inspector window->go to transform component ->click on 
+Reset Tab->Now Change the Rotation of x-axis as 90->go to camera view ->click on the projection->set it as 
+orthographic->Se the size to 10
+Step 4:Adding the backgroung 
+Click on player in the hierarchy->go to transform component ->deselect Player tab 
+Create the quad to hold the background Image
+Go to Hierarchy->click on Create->Select Quad->Rename it as Background->reset the game object
+Cha nge the rotat ion of back grou nd x- axis as 90 Go to Mesh Collider-
+>Remove Component
+ow Add The Texture To Our Background:
+Go To Project ->Assets->Texture->Select Nebula
+Drag the Image and drop it on the scene 
+view
+Drag the Image and drop it on the scene 
+view
+Drag the Image and drop it on the scene 
+view
+Drag the Image and Drop it to the Scene 
+View
+Reset the 
+scale of 
+Quad->set the 
+Scale x as 15 
+Step 5:Moving the Player
+Go to Asset->click on create-> folder->give the name as Script >Press Enter->Now We
+Will Create a new Script to our Player Ship->Click on Player In the Hierarchy ->Go to Inspector 
+Window->Click on Add Component Tab->select New Script->Give the Name to script as Player 
+Controller->Click on Create and Add Button.
+Step 6:Creating Shots
+Select Player From Hierarchy->go to Inspector Window->Go to Player Controller Script->Click on 
+Setting Tab->Select Edit Script Option
+
+
